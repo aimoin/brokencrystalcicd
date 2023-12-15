@@ -22,7 +22,7 @@ spec:
             - name: URL
               value: "https://{{ .Values.ingress.url }}"
             - name: DATABASE_HOST
-              value: "{{ include "brokencrystals.fullname" . }}-postgres-prod-service"
+              value: "{{ include "brokencrystals.fullname" . }}-postgres-prod"
             - name: DATABASE_SCHEMA
               value: "bc"
             - name: DATABASE_USER
@@ -78,7 +78,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ include "brokencrystals.fullname" . }}-nodejs-proxy-prod-service
+  name: {{ include "brokencrystals.fullname" . }}-nodejs-proxy-prod
   namespace: {{ .Release.Namespace }}
 spec:
   selector:

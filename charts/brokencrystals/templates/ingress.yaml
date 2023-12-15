@@ -24,7 +24,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "brokencrystals.fullname" . }}-nodejs-proxy-prod-service
+                name: {{ include "brokencrystals.fullname" . }}-nodejs-proxy-prod
                 port:
                   number: 80
 
@@ -54,6 +54,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "brokencrystals.fullname" . }}-keycloak-prod-service
+                name: {{ include "brokencrystals.fullname" . }}-keycloak-prod
                 port:
                   number: 8080

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - service_naming_issue
 
 jobs:
   packages:
