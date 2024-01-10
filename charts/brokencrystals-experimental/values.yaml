@@ -4,3 +4,4 @@ ingress:
   authlevel: "."
 images: 
   main: experimental
+  client: latest

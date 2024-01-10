@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "brokencrystals.fullname" . }}-keycloak-postgres
+  name: {{ .Release.Name }}-keycloak-postgres
   namespace: {{ .Release.Namespace }}
   labels:
     app: {{ include "brokencrystals.fullname" . }}-keycloak-postgres
@@ -40,7 +40,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ include "brokencrystals.fullname" . }}-postgres
+  name: {{ include "brokencrystals.fullname" . }}-keycloak-postgres
   namespace: {{ .Release.Namespace }}
 spec:
   selector:
